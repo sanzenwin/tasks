@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: sanzenwin/dekchromium
+          token: ${{ secrets.PAT }}
           path: temp
       - run: |
           cd temp
