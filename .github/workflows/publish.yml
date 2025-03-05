@@ -17,13 +17,13 @@ jobs:
         with:
           repository: sanzenwin/dekchromium
           token: ${{ secrets.PAT }}
-          path: temp
+          path: .temp
       - run: |
-          cd temp
+          cd .temp
           pdm add deksoftware --global
           rm -rf ./dist/* && pdm build && deksoftware install whl --path ./dist
           cd ..
-          rm -rf temp
+          rm -rf .temp
       - run: |
           version=$(python -c "print('$GITHUB_REF_NAME'.rsplit('-', 1)[-1])")
           dekchromium fetch-code ${version} chromium-${version}.zip
