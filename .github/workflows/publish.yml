@@ -9,6 +9,16 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+      - run: df -h
       - uses: actions/setup-python@v4
         with:
           python-version: 3
@@ -25,7 +35,6 @@ jobs:
           cd ..
           rm -rf .temp
       - run: |
-          df -h
           version=$(python -c "print('$GITHUB_REF_NAME'.rsplit('-', 1)[-1])")
           dekchromium fetch-code ${version} "" chromium-${version}.zip
       - uses: ncipollo/release-action@v1
