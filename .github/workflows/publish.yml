@@ -38,6 +38,7 @@ jobs:
       - run: |
           version=$(python -c "print('$GITHUB_REF_NAME'.rsplit('-', 1)[-1])")
           dekchromium fetch-code ${version} "" chromium-${version}.zip
+      - run: df -h $HOME
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
