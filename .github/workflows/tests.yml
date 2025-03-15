@@ -23,3 +23,4 @@ jobs:
           dektools file combine tests.zip
           dektools file remove-split tests.zip
           dektools file desc tests.zip
+          dektools file hash tests.zip
