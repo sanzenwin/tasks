@@ -19,3 +19,7 @@ jobs:
           dektools file desc tests.zip
           dektools file split tests.zip 314572800
           dektools file meta-split tests.zip
+          rm -rf tests.zip          
+          dektools file combine tests.zip
+          dektools file remove-split tests.zip
+          dektools file desc tests.zip
