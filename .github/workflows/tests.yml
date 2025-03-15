@@ -1,0 +1,20 @@
+name: Tests
+on:
+  push:
+    tags:
+      - 'tests-[0-9]+'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3
+      - uses: pdm-project/setup-pdm@v3
+      - run: |
+          pdm add dektools[crc] --global
+          fallocate -l 10G tests.zip
+          dektools file split tests.aip 314572800          
+          dektools file meta-split tests.aip
