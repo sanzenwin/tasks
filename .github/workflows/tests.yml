@@ -14,7 +14,8 @@ jobs:
           python-version: 3
       - uses: pdm-project/setup-pdm@v3
       - run: |
-          pdm add dektools[crc] --global
+          pdm add dektools --global
           fallocate -l 1G tests.zip
-          dektools file split tests.zip 314572800          
+          dektools file desc tests.zip
+          dektools file split tests.zip 314572800
           dektools file meta-split tests.zip
