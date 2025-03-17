@@ -30,8 +30,8 @@ jobs:
           token: ${{ secrets.PAT }}
           path: .temp
       - run: |
-          cd .temp
           pdm add deksoftware --global
+          cd .temp
           rm -rf ./dist/* && pdm build && deksoftware install whl --path ./dist
           cd ..
           rm -rf .temp
