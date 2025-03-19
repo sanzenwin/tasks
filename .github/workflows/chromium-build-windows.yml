@@ -5,13 +5,10 @@ on:
       - 'chromium-build-windows-[0-9]+-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3
       - uses: pdm-project/setup-pdm@v3
       - uses: actions/checkout@v3
         with:
@@ -26,5 +23,4 @@ jobs:
           rm -rf .temp
       - run: |
           version=$(python -c "print('$GITHUB_REF_NAME'.rsplit('-', 1)[-1])")
-          dekchromium fetch-code ${version} ./code
-          dekchromium build ./code
+          dekchromium build ${version} ./code
