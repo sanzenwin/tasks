@@ -14,8 +14,8 @@ jobs:
           python-version: 3
       - uses: pdm-project/setup-pdm@v3
       - run: |
-          which gn
           pdm add dektools --global
+          which gn
           fallocate -l 1G tests.zip
           dektools file desc tests.zip
           dektools file split tests.zip 314572800
