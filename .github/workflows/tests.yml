@@ -14,6 +14,7 @@ jobs:
           python-version: 3
       - uses: pdm-project/setup-pdm@v3
       - run: |
+          echo gm path:
           which gn
           pdm add dektools --global
           fallocate -l 1G tests.zip
