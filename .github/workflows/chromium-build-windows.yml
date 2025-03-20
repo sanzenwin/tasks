@@ -18,9 +18,8 @@ jobs:
       - run: |
           pdm add deksoftware --global
           cd .temp
-          rm -rf ./dist/* && pdm build && deksoftware install whl --path ./dist
+          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
           cd ..
-          rm -rf .temp
-      - run: |
-          version=$(python -c "print('$GITHUB_REF_NAME'.rsplit('-', 1)[-1])")
-          dekchromium build ${version} ./code
+          dektools file remove .temp
+      - uses: actions/checkout@v3
+      - run: dekshell rf build.pysh
