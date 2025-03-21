@@ -1,0 +1,23 @@
+version: 136.0.7078.4
+workdir: {home}
+src_dir: {workdir}/src
+
+target_dir: {workdir}/dist
+>path.md {target_dir}
+target: {target_dir}/chromium.zip
+
+dekchromium fetch-code {version} {src_dir}
+
+tools_build_dir: {workdir}/tools-build
+>path.md {tools_build_dir}
+git clone https://chromium.googlesource.com/chromium/tools/build.git {tools_build_dir}
+
+docker run --rm \
+-v {tools_build_dir}:/root/{tools_build_dir} \
+-v {src_dir}:/root/{src_dir} \
+-v {target_dir}:/root/{target_dir} \
+sanzenwin/cicd:0.1.67 \
+bash -c "python /root/{tools_build_dir}/recipes/recipe_modules/chromium/resources/export_tarball.py --remove-nonessential-files --src-dir /root/{src_dir} --version {version} /root/{target}"
+
+target_tar: {target}.tar.xz
+echo {target_tar} desc: {path.desc(target_tar)}

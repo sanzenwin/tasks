@@ -13,15 +13,15 @@ jobs:
         with:
           python-version: 3
       - uses: pdm-project/setup-pdm@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: sanzenwin/dekchromium
+          token: ${{ secrets.PAT }}
+          path: .temp
       - run: |
-          docker run --rm sanzenwin/cicd:0.1.67 bash -c "tar --help && xz --help && python --help"
-          pdm add dektools --global
-          fallocate -l 1G tests.zip
-          dektools file desc tests.zip
-          dektools file split tests.zip 314572800
-          dektools file meta-split tests.zip
-          rm -rf tests.zip          
-          dektools file combine tests.zip
-          dektools file remove-split tests.zip
-          dektools file desc tests.zip
-          dektools file hash tests.zip
+          pdm add deksoftware --global
+          cd .temp
+          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
+          cd ..
+          dektools file remove .temp
+      - run: dekshell rf tests.pysh
