@@ -1,5 +1,5 @@
 version: 136.0.7078.4
-workdir: {home}
+workdir: {path.home}
 src_dir: {workdir}/src
 
 target_dir: {workdir}/dist
