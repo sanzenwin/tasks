@@ -14,7 +14,7 @@ jobs:
           python-version: 3
       - uses: pdm-project/setup-pdm@v3
       - run: |
-          docker run --rm ubuntu bash -c "apt update && apt install xz-utils && tar --help && xz --help && python --help"
+          docker run --rm ubuntu/python:3.10 bash -c "apt update && apt install xz-utils && tar --help && xz --help && python --help"
           pdm add dektools --global
           fallocate -l 1G tests.zip
           dektools file desc tests.zip
