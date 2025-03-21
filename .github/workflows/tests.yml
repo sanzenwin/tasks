@@ -24,4 +24,5 @@ jobs:
           dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
           cd ..
           dektools file remove .temp
+      - uses: actions/checkout@v3
       - run: dekshell rf tests.pysh
