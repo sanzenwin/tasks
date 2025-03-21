@@ -17,7 +17,7 @@ docker run --rm \
 -v {src_dir}:/root{src_dir} \
 -v {target_dir}:/root{target_dir} \
 sanzenwin/cicd:0.1.67 \
-bash -c "python /root{tools_build_dir}/recipes/recipe_modules/chromium/resources/export_tarball.py --remove-nonessential-files --src-dir /root{src_dir} --version {version} /root{target}"
+bash -c "ls /root{src_dir} && python /root{tools_build_dir}/recipes/recipe_modules/chromium/resources/export_tarball.py --remove-nonessential-files --src-dir /root{src_dir} --version {version} /root{target}"
 
 target_tar: {target}.tar.xz
 echo {target_tar} desc: {path.desc(target_tar)}
