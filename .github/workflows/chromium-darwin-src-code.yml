@@ -36,7 +36,8 @@ jobs:
           cd ..
           dektools file remove .temp
       - uses: actions/checkout@v3
-      - run: dekshell rf upload.pysh
+      - run: dekshell rf upload1.pysh
+      - run: dekshell rf upload2.pysh
       - run: df -h $HOME
       - uses: ncipollo/release-action@v1
         with:

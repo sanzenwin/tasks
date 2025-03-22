@@ -4,10 +4,8 @@ on:
     tags:
       - 'chromium-windows-src-code-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 jobs:
-  release:
+  fetch:
     runs-on: windows-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/setup-python@v4
         with:
@@ -25,8 +23,21 @@ jobs:
           cd ..
           dektools file remove .temp
       - uses: actions/checkout@v3
-      - run: dekshell rf upload.pysh
-      - run: df -h $HOME
+      - run: dekshell rf upload1.pysh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tar-xz
+          path: |
+            *.tar.xz
+  pack:
+    needs: fetch
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v4
+        with:
+          name: tar-xz
+      - run: dekshell rf upload2.pysh
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
