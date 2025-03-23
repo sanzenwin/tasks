@@ -7,7 +7,7 @@ permissions:
   contents: write
 jobs:
   build-1:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
