@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build-1:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: &steps
       - uses: pdm-project/setup-pdm@v3
       - uses: actions/checkout@v3
