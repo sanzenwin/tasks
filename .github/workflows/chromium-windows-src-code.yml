@@ -1,4 +1,4 @@
-name: Generate chromium src code
+name: Windows generate chromium src code
 on:
   push:
     tags:

@@ -1,25 +1,12 @@
-name: Generate chromium src code
+name: Linux generate chromium src code
 on:
   push:
     tags:
       - 'chromium-linux-src-code-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 jobs:
-  release:
+  fetch:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - run: df -h $HOME
-      - uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          tool-cache: false
-          android: true
-          dotnet: true
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
-      - run: df -h $HOME
       - uses: actions/setup-python@v4
         with:
           python-version: 3
@@ -37,8 +24,37 @@ jobs:
           dektools file remove .temp
       - uses: actions/checkout@v3
       - run: dekshell rf upload1.pysh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tar-xz
+          path: |
+            *.tar.xz
+  pack:
+    needs: fetch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3
+      - uses: pdm-project/setup-pdm@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: sanzenwin/dekchromium
+          token: ${{ secrets.PAT }}
+          path: .temp
+      - run: |
+          pdm add deksoftware --global
+          cd .temp
+          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
+          cd ..
+          dektools file remove .temp
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v4
+        with:
+          name: tar-xz
       - run: dekshell rf upload2.pysh
-      - run: df -h $HOME
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
