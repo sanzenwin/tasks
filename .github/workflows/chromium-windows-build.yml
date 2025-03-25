@@ -30,7 +30,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -70,7 +70,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -110,7 +110,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -150,7 +150,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -190,7 +190,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -230,7 +230,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -270,7 +270,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -310,7 +310,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -350,7 +350,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -390,7 +390,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -430,7 +430,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -470,7 +470,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -510,7 +510,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -550,7 +550,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
@@ -590,7 +590,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
-        name: building
+        pattern: building
     - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
