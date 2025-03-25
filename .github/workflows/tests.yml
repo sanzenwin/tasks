@@ -45,11 +45,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         pattern: building
-    - run: 'version=$(python -c "print(''$GITHUB_REF_NAME''.rsplit(''-'', 1)[-1])")
-
-        dekchromium build ${version}
-
-        '
+    - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
         name: building
@@ -103,11 +99,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         pattern: building
-    - run: 'version=$(python -c "print(''$GITHUB_REF_NAME''.rsplit(''-'', 1)[-1])")
-
-        dekchromium build ${version}
-
-        '
+    - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
         name: building
@@ -161,11 +153,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         pattern: building
-    - run: 'version=$(python -c "print(''$GITHUB_REF_NAME''.rsplit(''-'', 1)[-1])")
-
-        dekchromium build ${version}
-
-        '
+    - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
         name: building
@@ -219,11 +207,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         pattern: building
-    - run: 'version=$(python -c "print(''$GITHUB_REF_NAME''.rsplit(''-'', 1)[-1])")
-
-        dekchromium build ${version}
-
-        '
+    - run: dekshell rf build.pysh
     - uses: geekyeggo/delete-artifact@v5
       with:
         name: building
