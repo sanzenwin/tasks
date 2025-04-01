@@ -39,6 +39,7 @@ jobs:
           name: building
           path: |
             *.tar.gz
+            *.zip
             *.done
   build-2:
     needs: build-1
@@ -104,4 +105,4 @@ jobs:
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: "*.zip"
+          artifacts: "chromium-*.zip"
