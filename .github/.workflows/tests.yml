@@ -39,6 +39,7 @@ jobs:
           name: building
           path: |
             *.tar.gz
+            *.zip
             *.done
   build-2:
     needs: build-1
