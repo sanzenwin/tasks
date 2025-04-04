@@ -21,6 +21,7 @@ jobs:
           rm -rf $(sudo python -c "import sysconfig; print(sysconfig.get_path('purelib'))")/urllib3*
           sudo pdm add deksoftware --global
           cd .temp
+          rm -rf $(sudo python -c "import sysconfig; print(sysconfig.get_path('purelib'))")/urllib3*
           dektools file remove ./dist && pdm build && sudo deksoftware install whl --path ./dist
           cd ..
           dektools file remove .temp
