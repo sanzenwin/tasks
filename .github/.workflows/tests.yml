@@ -18,9 +18,9 @@ jobs:
           token: ${{ secrets.PAT }}
           path: .temp
       - run: |
-          pdm add deksoftware --global
+          sudo pdm add deksoftware --global
           cd .temp
-          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
+          dektools file remove ./dist && pdm build && sudo deksoftware install whl --path ./dist
           cd ..
           dektools file remove .temp
       - uses: actions/checkout@v3
@@ -30,4 +30,5 @@ jobs:
           merge-multiple: true
       - run: sudo apt-get update && sudo apt-get install -y gperf
       - run: sudo which dekshell
-      - run: sudo dekshell rf build.pysh
+      - run: sudo dekshell --help
+

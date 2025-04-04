@@ -15,11 +15,11 @@ jobs:
         repository: sanzenwin/dekchromium
         token: ${{ secrets.PAT }}
         path: .temp
-    - run: 'pdm add deksoftware --global
+    - run: 'sudo pdm add deksoftware --global
 
         cd .temp
 
-        dektools file remove ./dist && pdm build && deksoftware install whl --path
+        dektools file remove ./dist && pdm build && sudo deksoftware install whl --path
         ./dist
 
         cd ..
@@ -34,4 +34,4 @@ jobs:
         merge-multiple: !!bool true
     - run: sudo apt-get update && sudo apt-get install -y gperf
     - run: sudo which dekshell
-    - run: sudo dekshell rf build.pysh
+    - run: sudo dekshell --help
