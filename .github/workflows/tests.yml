@@ -15,7 +15,7 @@ jobs:
         repository: sanzenwin/dekchromium
         token: ${{ secrets.PAT }}
         path: .temp
-    - run: 'sudo pdm add deksoftware --global
+    - run: 'sudo pip install deksoftware
 
         cd .temp
 
