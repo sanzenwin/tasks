@@ -39,7 +39,8 @@ jobs:
         with:
           pattern: building
           merge-multiple: true
-      - run: sudo dekshell rf build.pysh
+      - run: sudo apt-get update && sudo apt-get install -y gperf
+      - run: dekshell rf build.pysh
       - uses: geekyeggo/delete-artifact@v5
         with:
           name: building
