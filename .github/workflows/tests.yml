@@ -15,7 +15,9 @@ jobs:
         repository: sanzenwin/dekchromium
         token: ${{ secrets.PAT }}
         path: .temp
-    - run: 'sudo pip install deksoftware
+    - run: 'rm -rf $(python3 -c "import sysconfig; print(sysconfig.get_path(''purelib''))")/urllib3*
+
+        sudo pdm add deksoftware --global
 
         cd .temp
 
