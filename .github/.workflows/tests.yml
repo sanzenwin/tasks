@@ -11,7 +11,7 @@ jobs:
   build-1:
     runs-on: ubuntu-latest
     steps:
-      - uses: pdm-project/setup-pdm@v3
+      - run: sudo pip install pdm
       - uses: actions/checkout@v3
         with:
           repository: sanzenwin/dekchromium
