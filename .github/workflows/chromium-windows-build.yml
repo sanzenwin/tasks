@@ -658,4 +658,4 @@ jobs:
       with:
         skipIfReleaseExists: !!bool true
         generateReleaseNotes: !!bool true
-        artifacts: chromium-*.zip
+        artifacts: "chromium-*.zip            \nchromium-*.exe\n"
