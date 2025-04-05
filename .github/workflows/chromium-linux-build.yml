@@ -59,6 +59,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-2:
     needs: build-1
@@ -113,6 +115,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-3:
@@ -169,6 +173,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-4:
     needs: build-3
@@ -223,6 +229,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-5:
@@ -279,6 +287,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-6:
     needs: build-5
@@ -333,6 +343,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-7:
@@ -389,6 +401,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-8:
     needs: build-7
@@ -443,6 +457,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-9:
@@ -499,6 +515,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-10:
     needs: build-9
@@ -553,6 +571,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-11:
@@ -609,6 +629,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-12:
     needs: build-11
@@ -663,6 +685,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-13:
@@ -719,6 +743,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-14:
     needs: build-13
@@ -773,6 +799,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.deb
 
           '
   build-15:
@@ -829,6 +857,8 @@ jobs:
 
           *.done
 
+          chromium-*.deb
+
           '
   build-16:
     needs: build-15
@@ -838,4 +868,6 @@ jobs:
       with:
         skipIfReleaseExists: !!bool true
         generateReleaseNotes: !!bool true
-        artifacts: chromium-*.zip
+        artifacts: 'chromium-*.deb
+
+          '

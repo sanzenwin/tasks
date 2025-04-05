@@ -23,7 +23,7 @@ jobs:
           dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
           cd ..
           dektools file remove .temp
-      - run: sudo brew install create-dmg
+      - run: brew install create-dmg
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v4
         with:

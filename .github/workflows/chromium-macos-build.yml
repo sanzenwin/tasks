@@ -27,7 +27,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -47,6 +47,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-2:
@@ -71,7 +73,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -91,6 +93,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-3:
@@ -115,7 +119,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -135,6 +139,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-4:
@@ -159,7 +165,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -179,6 +185,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-5:
@@ -203,7 +211,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -223,6 +231,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-6:
@@ -247,7 +257,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -267,6 +277,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-7:
@@ -291,7 +303,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -311,6 +323,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-8:
@@ -335,7 +349,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -355,6 +369,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-9:
@@ -379,7 +395,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -399,6 +415,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-10:
@@ -423,7 +441,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -443,6 +461,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-11:
@@ -467,7 +487,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -487,6 +507,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-12:
@@ -511,7 +533,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -531,6 +553,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-13:
@@ -555,7 +579,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -575,6 +599,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-14:
@@ -599,7 +625,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -619,6 +645,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-15:
@@ -643,7 +671,7 @@ jobs:
         dektools file remove .temp
 
         '
-    - run: sudo brew install create-dmg
+    - run: brew install create-dmg
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v4
       with:
@@ -663,6 +691,8 @@ jobs:
           *.zip
 
           *.done
+
+          chromium-*.dmg
 
           '
   build-16:
