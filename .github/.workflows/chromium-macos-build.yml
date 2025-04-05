@@ -42,6 +42,7 @@ jobs:
             *.tar.gz
             *.zip
             *.done
+            chromium-*.dmg
   build-2:
     needs: build-1
     runs-on: macos-latest

@@ -41,6 +41,8 @@ jobs:
             *.tar.gz
             *.zip
             *.done
+            chromium-*.zip            
+            chromium-*.exe
   build-2:
     needs: build-1
     runs-on: windows-latest
