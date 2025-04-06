@@ -42,9 +42,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -88,9 +86,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -134,9 +130,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -180,9 +174,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -226,9 +218,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -272,9 +262,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -318,9 +306,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -364,9 +350,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -410,9 +394,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -456,9 +438,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -502,9 +482,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -548,9 +526,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -594,9 +570,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -640,9 +614,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 
@@ -686,9 +658,7 @@ jobs:
       id: artifact-upload
       with:
         name: building
-        path: '*.tar.gz
-
-          *.zip
+        path: '*.zip
 
           *.done
 

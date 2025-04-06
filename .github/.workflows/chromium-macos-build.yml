@@ -39,7 +39,6 @@ jobs:
         with:
           name: building
           path: |
-            *.tar.gz
             *.zip
             *.done
             chromium-*.dmg
