@@ -7,7 +7,8 @@ permissions:
   contents: write
 jobs:
   build-1:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
-    - run: docker run --rm ubuntu df -h --total
+    - uses: actions/setup-docker-on-macos
     - run: df -h --total
+    - run: docker run --rm ubuntu df -h --total
