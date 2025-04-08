@@ -9,9 +9,7 @@ jobs:
   build-1:
     runs-on: macos-latest
     steps:
-    - run: 'brew install colima
-
-        brew install docker
+    - run: 'brew install docker
 
         colima start
 

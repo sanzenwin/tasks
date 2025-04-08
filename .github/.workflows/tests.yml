@@ -12,7 +12,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          brew install colima
           brew install docker
           colima start
       - run: df -h --total
