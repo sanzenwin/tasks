@@ -9,6 +9,15 @@ jobs:
   build-1:
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -53,6 +62,15 @@ jobs:
     needs: build-1
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -97,6 +115,15 @@ jobs:
     needs: build-2
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -141,6 +168,15 @@ jobs:
     needs: build-3
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -185,6 +221,15 @@ jobs:
     needs: build-4
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -229,6 +274,15 @@ jobs:
     needs: build-5
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -273,6 +327,15 @@ jobs:
     needs: build-6
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -317,6 +380,15 @@ jobs:
     needs: build-7
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -361,6 +433,15 @@ jobs:
     needs: build-8
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -405,6 +486,15 @@ jobs:
     needs: build-9
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -449,6 +539,15 @@ jobs:
     needs: build-10
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -493,6 +592,15 @@ jobs:
     needs: build-11
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -537,6 +645,15 @@ jobs:
     needs: build-12
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -581,6 +698,15 @@ jobs:
     needs: build-13
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -625,6 +751,15 @@ jobs:
     needs: build-14
     runs-on: macos-15
     steps:
+    - name: Cleanup Xcode installations
+      run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo
+        rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+    - name: Select Xcode version
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
+    - name: Cleanup Xcode Simulators
+      run: sudo xcrun simctl delete all
+    - name: Cleanup Android Related Stuff
+      run: sudo rm -rf $ANDROID_HOME
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:

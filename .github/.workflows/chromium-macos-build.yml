@@ -11,6 +11,14 @@ jobs:
   build-1:
     runs-on: macos-15
     steps: &steps
+      - name: Cleanup Xcode installations
+        run: sudo mv /Applications/Xcode_16.app /Applications/tmp_Xcode_16.app ; sudo rm -rf /Applications/Xcode* ; sudo mv /Applications/tmp_Xcode_16.app /Applications/Xcode_16.app
+      - name: Select Xcode version
+        run: sudo xcode-select --switch /Applications/Xcode_16.app
+      - name: Cleanup Xcode Simulators
+        run: sudo xcrun simctl delete all
+      - name: Cleanup Android Related Stuff
+        run: sudo rm -rf $ANDROID_HOME
       - uses: pdm-project/setup-pdm@v3
       - uses: actions/checkout@v3
         with:
