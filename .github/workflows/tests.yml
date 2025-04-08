@@ -9,4 +9,4 @@ jobs:
   build-1:
     runs-on: macos-latest
     steps:
-    - run: df -h --total
+    - run: df -h
