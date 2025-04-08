@@ -7,14 +7,8 @@ permissions:
   contents: write
 jobs:
   build-1:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-    - uses: Vampire/setup-wsl@v5
-    - shell: wsl-bash_Ubuntu-20.04 {0}
-      run: 'sudo apt-get update
-
-        sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-
-        docker --help
+    - run: 'docker run --rm chromium-builder:bullseye which gn
 
         '
