@@ -11,8 +11,4 @@ jobs:
   build-1:
     runs-on: macos-latest
     steps:
-      - run: |
-          brew install docker
-          colima start
       - run: df -h --total
-      - run: docker run --rm ubuntu df -h --total
