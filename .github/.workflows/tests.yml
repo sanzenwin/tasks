@@ -11,6 +11,6 @@ jobs:
   build-1:
     runs-on: macos-13
     steps:
-      - uses: actions/setup-docker-on-macos
+      - uses: actions/setup-docker-on-macos@v1-alpha
       - run: df -h --total
       - run: docker run --rm ubuntu df -h --total
