@@ -1,11 +1,11 @@
-name: Windows generate chromium src code
+name: Linux generate chromium docker src code
 on:
   push:
     tags:
-      - 'chromium-macos-src-code-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
+      - 'chromium-linux-docker-src-code-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 jobs:
   fetch:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     steps:
       - run: df -h $HOME
       - uses: jlumbroso/free-disk-space@v1.3.1
@@ -42,10 +42,21 @@ jobs:
             *.tar.xz
   pack:
     needs: fetch
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
+      - run: df -h $HOME
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+      - run: df -h $HOME
       - uses: actions/setup-python@v4
         with:
           python-version: 3
@@ -65,9 +76,4 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: tar-xz
-      - run: dekshell rf upload2.pysh
-      - uses: ncipollo/release-action@v1
-        with:
-          skipIfReleaseExists: true
-          generateReleaseNotes: true
-          artifacts: chromium-*.zip.*
+      - run: dekshell rf docker.pysh

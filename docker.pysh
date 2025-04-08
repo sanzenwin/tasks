@@ -1,0 +1,3 @@
+version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
+
+dekchromium upload-docker {version}
