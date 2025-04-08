@@ -77,31 +77,11 @@ jobs:
   build-10:
     needs: build-9
     runs-on: windows-latest
-    steps: *steps
-  build-11:
-    needs: build-10
-    runs-on: windows-latest
-    steps: *steps
-  build-12:
-    needs: build-11
-    runs-on: windows-latest
-    steps: *steps
-  build-13:
-    needs: build-12
-    runs-on: windows-latest
-    steps: *steps
-  build-14:
-    needs: build-13
-    runs-on: windows-latest
-    steps: *steps
-  build-15:
-    needs: build-14
-    runs-on: windows-latest
-    steps: *steps
-  build-16:
-    needs: build-15
-    runs-on: windows-latest
     steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: building
+          merge-multiple: true
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
