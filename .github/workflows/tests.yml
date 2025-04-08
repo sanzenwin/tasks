@@ -9,4 +9,5 @@ jobs:
   build-1:
     runs-on: ubuntu-latest
     steps:
-    - run: docker run --rm ubuntu df -h /
+    - run: docker run --rm ubuntu df -h --total
+    - run: df -h --total
