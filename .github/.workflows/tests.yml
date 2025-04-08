@@ -9,6 +9,9 @@ permissions:
 
 jobs:
   build-1:
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
-      - run: df -h
+      - uses: Vampire/setup-wsl@v5
+      - shell: wsl-bash_Ubuntu-20.04 {0}
+        run: |
+            docker --help
