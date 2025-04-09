@@ -844,6 +844,4 @@ jobs:
         generateReleaseNotes: !!bool true
         artifacts: 'chromium-*.dmg
 
-          chromium-*.zip
-
-          '
+          chromium-*.zip'
