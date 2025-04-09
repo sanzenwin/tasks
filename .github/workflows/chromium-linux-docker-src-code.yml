@@ -76,4 +76,12 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: tar-xz
-      - run: dekshell rf docker.pysh
+      - env:
+          GITHUB__DOCKER_REGISTRY: ghcr.io
+          GITHUB__DOCKER_USERNAME: ${{ github.actor }}
+          GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
+
+          ALIYUN__DOCKER_REGISTRY: registry.cn-shenzhen.aliyuncs.com
+          ALIYUN__DOCKER_USERNAME: ${{ secrets.ALIYUN_DOCKER_HUB_USERNAME }}
+          ALIYUN__DOCKER_PASSWORD: ${{ secrets.ALIYUN_DOCKER_HUB_PASSWORD }}
+        run: dekshell rf docker.pysh

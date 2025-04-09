@@ -121,5 +121,5 @@ jobs:
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: |
+          artifacts: |-
             chromium-*.deb

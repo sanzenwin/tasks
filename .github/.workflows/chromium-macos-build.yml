@@ -50,6 +50,7 @@ jobs:
             *.zip
             *.done
             chromium-*.dmg
+            chromium-*.zip
   build-2:
     needs: build-1
     runs-on: macos-15
@@ -118,5 +119,6 @@ jobs:
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: |
+          artifacts: |-
             chromium-*.dmg
+            chromium-*.zip
