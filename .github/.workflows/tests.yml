@@ -12,4 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          docker run --rm chromium-builder:bullseye which gn
+          mkdir test
+          touch test/test1
+          tar -c -I "zstd -vv -11 -T0" -f ./test.tar.zst test
