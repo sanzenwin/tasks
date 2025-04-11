@@ -6,6 +6,8 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - run: df -h $HOME
       - uses: jlumbroso/free-disk-space@v1.3.1
