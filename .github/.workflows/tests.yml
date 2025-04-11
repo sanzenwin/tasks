@@ -16,4 +16,4 @@ jobs:
           touch test/test1
           cd test
           zstd --help
-          tar -c -I "zstd -vv -11 -T0" -f ../test.tar.zst .
+          tar -c --use-compress-program "zstd -vv -11 -T0" -f ../test.tar.zst .
