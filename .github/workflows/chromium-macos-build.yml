@@ -18,6 +18,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -73,6 +77,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -128,6 +136,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -183,6 +195,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -238,6 +254,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -293,6 +313,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -348,6 +372,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -403,6 +431,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -458,6 +490,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -513,6 +549,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -568,6 +608,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -623,6 +667,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -678,6 +726,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -733,6 +785,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
@@ -788,6 +844,10 @@ jobs:
       run: sudo xcrun simctl delete all
     - name: Cleanup Android Related Stuff
       run: sudo rm -rf $ANDROID_HOME
+    - name: Disable Spotlight
+      run: sudo mdutil -a -i off
+    - name: Run xcode-select
+      run: sudo xcode-select --switch /Applications/Xcode_16.app
     - uses: pdm-project/setup-pdm@v3
     - uses: actions/checkout@v3
       with:
