@@ -15,4 +15,4 @@ jobs:
           mkdir test
           touch test/test1
           cd test
-          tar -c -I "zstd -vv -11 -T0" -f ./test.tar.zst .
+          tar -c -I "zstd -vv -11 -T0" -f ../test.tar.zst .
