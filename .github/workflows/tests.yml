@@ -17,4 +17,25 @@ jobs:
 
         zstd --help
 
-        tar -c --use-compress-program "zstd -vv -11 -T0" -f ../test.tar.zst .'
+        tar -c --use-compress-program "zstd -vv -11 -T0" -f ../test.tar.zst .
+
+        ls ..
+
+        '
+  build-2:
+    needs: build-1
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'mkdir test
+
+        touch test/test1
+
+        cd test
+
+        zstd --help
+
+        tar -c --use-compress-program "zstd -vv -11 -T0" -f ../test.tar.zst .
+
+        ls ..
+
+        '
