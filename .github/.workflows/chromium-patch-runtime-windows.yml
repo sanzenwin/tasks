@@ -38,6 +38,7 @@ jobs:
         with:
           name: building
           path: |
+            *.tar.zst
             *.zip
             *.done
             chromium-*.zip
