@@ -59,4 +59,4 @@ jobs:
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: chromium-*.tar.xz.*
+          artifacts: chromium-*.zip.*
