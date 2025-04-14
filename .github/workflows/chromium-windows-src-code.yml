@@ -28,7 +28,7 @@ jobs:
         with:
           name: tar
           path: |
-            *.tar.zst
+            *.tar.xz
   pack:
     needs: fetch
     runs-on: ubuntu-latest
@@ -59,4 +59,4 @@ jobs:
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: chromium-*.tar.zst.*
+          artifacts: chromium-*.tar.xz.*
