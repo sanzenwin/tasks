@@ -26,9 +26,9 @@ jobs:
       - run: dekshell rf upload1.pysh
       - uses: actions/upload-artifact@v4
         with:
-          name: tar-xz
+          name: tar
           path: |
-            *.tar.xz
+            *.tar.zst
   pack:
     needs: fetch
     runs-on: ubuntu-latest
@@ -53,10 +53,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v4
         with:
-          name: tar-xz
+          name: tar
       - run: dekshell rf upload2.pysh
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
           generateReleaseNotes: true
-          artifacts: chromium-*.zip.*
+          artifacts: chromium-*.tar.zst.*
