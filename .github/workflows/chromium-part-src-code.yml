@@ -32,7 +32,7 @@ jobs:
       - run: |
           pdm add deksoftware --global
           cd .temp
-          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist
+          dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist --extra all
           cd ..
           dektools file remove .temp
       - uses: actions/checkout@v3
