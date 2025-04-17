@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        fallocate -l 23.68G test.tar
         pip install dekshell
+        fallocate -l 23.68G test.tar
+        dekshell rs "echo {>path.desc test.tar}"
         dekshell rs ">>compress test.tar test.tar.zip"
-        dekshell rs ">path.desc test.tar.zip"
+        dekshell rs "echo {>path.desc test.tar.zip}"
