@@ -16,6 +16,5 @@ jobs:
         dekshell rs ">>compress test.tar test.tar.zip"
         dekshell rs "echo {>path.desc test.tar.zip}"
 
-        rm -rf test.tar
         dekshell rs ">>decompress test.tar.zip ."
         dekshell rs "echo {>path.desc test.tar}"
