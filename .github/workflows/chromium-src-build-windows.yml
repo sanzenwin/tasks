@@ -2,7 +2,7 @@ name: Generate chromium part src code
 on:
   push:
     tags:
-      - 'chromium-src-code-common-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
+      - 'chromium-src-build-windows-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 jobs:
   fetch:
     runs-on: windows-latest
