@@ -25,7 +25,7 @@ jobs:
           cd ..
           dektools file remove .temp
       - uses: actions/checkout@v3
-      - run: dekshell rf chromium/src-code-build.pysh
+      - run: dekshell rf chromium/src-build.pysh
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
