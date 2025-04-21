@@ -2,7 +2,7 @@ name: Generate chromium dist
 on:
   push:
     tags:
-      - 'chromium-windows-build-test-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
+      - 'chromium-windows-build-full-[0-9]+.[0-9]+.[0-9]+.[0-9]+*'
 
 permissions:
   contents: write
@@ -28,4 +28,4 @@ jobs:
         with:
           pattern: building
           merge-multiple: true
-      - run: dekshell rf build-test.pysh
+      - run: dekshell rf chromium/build-full.pysh
