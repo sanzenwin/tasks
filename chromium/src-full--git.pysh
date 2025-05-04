@@ -1,3 +1,0 @@
-version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
-
-goto {>pymd dekchromium}/.core/full-official-fetch-git.pysh version--{version}

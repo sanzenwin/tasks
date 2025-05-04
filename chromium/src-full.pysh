@@ -1,3 +1,7 @@
 version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
 
-goto {>pymd dekchromium}/.core/full-upload.pysh version--{version}
+if platform.linux
+    goto {>pymd dekchromium}/.core/full-upload-docker.pysh version--{version}
+else
+    goto {>pymd dekchromium}/.core/full-upload.pysh version--{version}
+end
