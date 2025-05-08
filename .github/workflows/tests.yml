@@ -6,16 +6,17 @@ on:
 permissions:
   contents: write
 jobs:
-  build-1:
+  windows:
     runs-on: windows-latest
     steps:
+    - run: pip install dekshell
     - run: |
-        pip install dekshell
         dekshell rs "=[(print(x,flush=True), mp.os.system(f'"{x}" --version')) for x in which_list('tar')]"
       shell: cmd
-  build-2:
+  macos:
     runs-on: macos-15
     steps:
+    - run: pip install dekshell
     - run: |
-        pip install dekshell
+        brew info gnu-tar
         dekshell rs "=[(print(x,flush=True), mp.os.system(f'"{x}" --version')) for x in where_list('tar')]"
