@@ -1,5 +1,5 @@
 for path in >those tar
-    s={=<"{path}" --version}
+    s=:{=<"{path}" --version}
     if 'GNU tar' in s
         return f'"{path}"'
     end
