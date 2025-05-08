@@ -9,16 +9,22 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
+    - uses: actions/checkout@v3
     - run: pip install dekshell
     - run: |
-        dekshell rs "=[(print(x,flush=True), mp.os.system(f'\"{x}\" --version')) for x in which_list('tar')]"
+        dekshell rs "\"{>sh.goto {>>cwd}/.gnu-tar.pysh}\" --version"
       shell: cmd
   macos:
     runs-on: macos-15
     steps:
+    - uses: actions/checkout@v3
     - run: pip install dekshell
     - run: |
-        brew info gnu-tar
-        dekshell rs "=[(print(x,flush=True), mp.os.system(f'"{x}" --version')) for x in where_list('tar')]"
-
-        gtar --version
+        dekshell rs "\"{>sh.goto {>>cwd}/.gnu-tar.pysh}\" --version"
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: pip install dekshell
+    - run: |
+        dekshell rs "\"{>sh.goto {>>cwd}/.gnu-tar.pysh}\" --version"

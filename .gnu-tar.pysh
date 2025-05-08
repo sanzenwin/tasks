@@ -1,0 +1,14 @@
+for path in >those tar
+    s={=<"{path}" --version}
+    if 'GNU tar' in s
+        return f'"{path}"'
+    end
+end
+
+path> which gtar
+
+if path
+    return f'"{path}"'
+end
+
+raise Can't find GNU tar
