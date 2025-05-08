@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: pip install dekshell
     - run: |
-        dekshell rs '"{>sh.goto {>>cwd}/.gnu-tar.pysh}" --version'
+        dekshell rs "{>sh.goto {>>cwd}/.gnu-tar.pysh} --version"
       shell: cmd
   macos:
     runs-on: macos-15
@@ -20,11 +20,11 @@ jobs:
     - uses: actions/checkout@v3
     - run: pip install dekshell
     - run: |
-        dekshell rs "\"{>sh.goto {>>cwd}/.gnu-tar.pysh}\" --version"
+        dekshell rs "{>sh.goto {>>cwd}/.gnu-tar.pysh} --version"
   linux:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - run: pip install dekshell
     - run: |
-        dekshell rs "\"{>sh.goto {>>cwd}/.gnu-tar.pysh}\" --version"
+        dekshell rs "{>sh.goto {>>cwd}/.gnu-tar.pysh} --version"
