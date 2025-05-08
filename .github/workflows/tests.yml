@@ -11,7 +11,7 @@ jobs:
     steps:
     - run: pip install dekshell
     - run: |
-        dekshell rs "=[(print(x,flush=True), mp.os.system(f'"{x}" --version')) for x in which_list('tar')]"
+        dekshell rs "=[(print(x,flush=True), mp.os.system(f'\"{x}\" --version')) for x in which_list('tar')]"
       shell: cmd
   macos:
     runs-on: macos-15
@@ -20,3 +20,5 @@ jobs:
     - run: |
         brew info gnu-tar
         dekshell rs "=[(print(x,flush=True), mp.os.system(f'"{x}" --version')) for x in where_list('tar')]"
+
+        gtar --version
