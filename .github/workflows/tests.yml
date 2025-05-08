@@ -11,13 +11,11 @@ jobs:
     steps:
     - run: |
         where tar
-        brew install gnu-tar
-        where tar
+        tar --version
       shell: cmd
   build-2:
     runs-on: macos-15
     steps:
     - run: |
         which tar
-        brew install gnu-tar
-        which tar
+        tar --version
