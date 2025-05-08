@@ -11,11 +11,11 @@ jobs:
     steps:
     - run: |
         pip install dekshell
-        dekshell rs "=[print(x), print(mp.os.system(f'{x} --version')) for x in which_list('tar')]"
+        dekshell rs "=[(print(x), print(mp.os.system(f'{x} --version'))) for x in which_list('tar')]"
       shell: cmd
   build-2:
     runs-on: macos-15
     steps:
     - run: |
         pip install dekshell
-        dekshell rs "=[print(x), print(mp.os.system(f'{x} --version')) for x in which_list('tar')]"
+        dekshell rs "=[(print(x), print(mp.os.system(f'{x} --version'))) for x in which_list('tar')]"
