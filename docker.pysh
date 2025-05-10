@@ -1,9 +1,0 @@
-version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
-image: {$ALIYUN__DOCKER_REGISTRY}/sanzen-store/chromium-generator:{version}
-image2: {$GITHUB__DOCKER_REGISTRY}/{$GITHUB__DOCKER_USERNAME}/chromium-generator:{version}
-
->artifacts.docker.login_all_env
-dekchromium upload-docker {version} {image}
->artifacts.docker.push {image}
->artifacts.docker.tag {image} {image2}
->artifacts.docker.push {image2}

@@ -1,4 +1,0 @@
-version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
-
-dekchromium setup
-goto {>pymd dekchromium}/.part/main.pysh version--{version}

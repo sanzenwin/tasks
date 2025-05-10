@@ -1,3 +1,0 @@
-version: {'{$GITHUB_REF_NAME}'.rsplit('-', 1)[-1]}
-
-dekchromium build {version} {>>sys.ak =__args}

@@ -1,4 +1,4 @@
-name: Generate chromium part src code
+name: Generate chromium src code
 on:
   push:
     tags:
@@ -15,17 +15,16 @@ jobs:
       - uses: pdm-project/setup-pdm@v3
       - uses: actions/checkout@v3
         with:
-          repository: sanzenwin/dekchromium
+          repository: sanzenwin/dekplaywright
           token: ${{ secrets.PAT }}
           path: .temp
       - run: |
           pdm add deksoftware --global
-          cd .temp
+          cd .temp/dekchromium
           dektools file remove ./dist && pdm build && deksoftware install whl --path ./dist --extra all
-          cd ..
+          cd ../..
           dektools file remove .temp
-      - uses: actions/checkout@v3
-      - run: dekshell rf chromium/src-full.pysh
+      - run: dekchromium upload
       - uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
