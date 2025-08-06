@@ -7,10 +7,13 @@ permissions:
   contents: write
 jobs:
   windows:
-    runs-on: windows-2022
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: pip install uv
-    - run: |
-        cd uv
-        uv sync -vv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      - uses: actions/checkout@v3
+      - run: pip install uv
+      - run: |
+          cd uv
+          uv sync -vv
