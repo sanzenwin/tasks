@@ -1,0 +1,16 @@
+name: Test uv
+on:
+  push:
+    tags:
+    - uv-tests-[0-9]+
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: pip install uv
+    - run: |
+        cd uv
+        uv sync -vv
