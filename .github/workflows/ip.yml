@@ -1,0 +1,13 @@
+name: Test uv
+on:
+  push:
+    tags:
+    - ip-[0-9]+
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl https://ipv4.webshare.io/
