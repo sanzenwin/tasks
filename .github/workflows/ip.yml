@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 jobs:
-  windows:
+  get-ip:
     runs-on: ubuntu-latest
     steps:
       - run: |
