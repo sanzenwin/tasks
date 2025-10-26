@@ -2,7 +2,7 @@ name: Proxy for dek8s
 on:
   workflow_dispatch:
 jobs:
-  fetch:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v4
