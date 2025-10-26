@@ -1,0 +1,36 @@
+name: Proxy for dekhub
+on:
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+      - uses: pdm-project/setup-pdm@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: sanzenwin/dekhub
+          token: ${{ secrets.PAT }}
+          path: .tmp
+      - run: |
+          cd .tmp
+          pdm build; for filename in dist/*.whl; do break; done; pip3 install $filename
+      - run: |
+          sudo apt-get -y install skopeo
+      - env:
+          TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
+          TENCENT__DOCKER_USERNAME: ${{ secrets.TENCENT_DOCKER_HUB_USERNAME }}
+          TENCENT__DOCKER_PASSWORD: ${{ secrets.TENCENT_DOCKER_HUB_PASSWORD }}
+
+          DOCKER__DOCKER_REGISTRY: docker.io
+          DOCKER__DOCKER_USERNAME: ${{ secrets.DOCKER_DOCKER_HUB_USERNAME }}
+          DOCKER__DOCKER_PASSWORD: ${{ secrets.DOCKER_DOCKER_HUB_PASSWORD }}
+
+          GITHUB__DOCKER_REGISTRY: ghcr.io
+          GITHUB__DOCKER_USERNAME: ${{ github.actor }}
+          GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
+        run: |
+          dekhub docker build
+          dekhub docker sync
