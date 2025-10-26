@@ -36,5 +36,5 @@ jobs:
           GITHUB__DOCKER_USERNAME: ${{ github.actor }}
           GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
         run: |
-          dek8s prepare build-controller ./tmp/$(cat ./.tmp/self)
+          dek8s prepare build-controller ./.tmp/$(cat ./.tmp/self)
           dek8s prepare sync
