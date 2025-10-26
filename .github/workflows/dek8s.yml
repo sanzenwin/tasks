@@ -5,6 +5,17 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - run: df -h $HOME
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: !!bool false
+          android: !!bool true
+          dotnet: !!bool true
+          haskell: !!bool true
+          large-packages: !!bool true
+          docker-images: !!bool true
+          swap-storage: !!bool true
+      - run: df -h $HOME
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
