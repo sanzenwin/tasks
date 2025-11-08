@@ -1,0 +1,16 @@
+name: Disk size checker
+on:
+  workflow_dispatch:
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - run: df -h $HOME
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: df -h $HOME
+  macos:
+    runs-on: macos-latest
+    steps:
+      - run: df -h $HOME
