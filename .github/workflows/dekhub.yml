@@ -18,7 +18,7 @@ jobs:
           cd .tmp
           pdm build; for filename in dist/*.whl; do break; done; pip3 install $filename
       - run: |
-          sudo apt-get -y install skopeo
+          brew install skopeo
       - env:
           TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
           TENCENT__DOCKER_USERNAME: ${{ secrets.TENCENT_DOCKER_HUB_USERNAME }}

@@ -21,7 +21,7 @@ jobs:
           cd .tmp
           pdm build; for filename in dist/*.whl; do break; done; python3 -m pip install $filename; echo $filename > ./self
       - run: |
-          sudo apt-get -y install skopeo
+          brew install skopeo
       - env:
           DOCKER_DEFAULT_LOGIN_REGISTRY: tencent
           TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
