@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   main:
-    runs-on: macos-15
+    runs-on: macos-13
     steps:
       - uses: actions/setup-python@v4
         with:

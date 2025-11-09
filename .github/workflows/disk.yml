@@ -11,6 +11,6 @@ jobs:
     steps:
       - run: df -h $HOME
   macos:
-    runs-on: macos-15
+    runs-on: macos-13
     steps:
       - run: df -h $HOME
