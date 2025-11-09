@@ -16,6 +16,7 @@ jobs:
           docker-images: !!bool true
           swap-storage: !!bool true
       - run: df -h $HOME
+      - run: pip install dekartifacts
       - env:
           TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
           TENCENT__DOCKER_USERNAME: ${{ secrets.TENCENT_DOCKER_HUB_USERNAME }}
@@ -29,4 +30,5 @@ jobs:
           GITHUB__DOCKER_USERNAME: ${{ github.actor }}
           GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
         run: |
+          dekartifacts docker login
           docker run --rm --entrypoint webui.sh ghcr.io/${{ github.actor }}/mirror:${{ github.actor }}-index-tts-0.1.2 --share
