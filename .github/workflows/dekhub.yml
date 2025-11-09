@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   main:
-    runs-on: macos-latest
+    runs-on: macos-latest-large
     steps:
       - uses: actions/setup-python@v4
         with:
@@ -19,11 +19,6 @@ jobs:
           pdm build; for filename in dist/*.whl; do break; done; pip3 install $filename
       - run: |
           brew install skopeo
-      - uses: douglascamata/setup-docker-macos-action@v1.0.1
-        with:
-          lima: v1.2.1
-          colima: v0.9.1
-          colima-network-address: false
       - env:
           TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
           TENCENT__DOCKER_USERNAME: ${{ secrets.TENCENT_DOCKER_HUB_USERNAME }}
