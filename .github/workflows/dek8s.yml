@@ -3,8 +3,19 @@ on:
   workflow_dispatch:
 jobs:
   main:
-    runs-on: macos-13
+    runs-on: ubuntu-latest
     steps:
+      - run: df -h $HOME
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: !!bool false
+          android: !!bool true
+          dotnet: !!bool true
+          haskell: !!bool true
+          large-packages: !!bool true
+          docker-images: !!bool true
+          swap-storage: !!bool true
+      - run: df -h $HOME
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
@@ -22,11 +33,6 @@ jobs:
           pdm build; for filename in dist/*.whl; do break; done; python3 -m pip install $filename; echo $filename > ./self
       - run: |
           brew install skopeo
-      - uses: douglascamata/setup-docker-macos-action@v1.0.1
-        with:
-          lima: v1.2.1
-          colima: v0.9.1
-          colima-network-address: false
       - env:
           DOCKER_DEFAULT_LOGIN_REGISTRY: tencent
           TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
