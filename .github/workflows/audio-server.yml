@@ -29,4 +29,4 @@ jobs:
           GITHUB__DOCKER_USERNAME: ${{ github.actor }}
           GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
         run: |
-          docker run --rm --entrypoint webui.sh ghcr.io/sanzenwin/mirror:sanzenwin-index-tts-0.1.2 --share
+          docker run --rm --entrypoint webui.sh ghcr.io/${{ github.actor }}/mirror:${{ github.actor }}-index-tts-0.1.2 --share
