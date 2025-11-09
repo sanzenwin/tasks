@@ -1,0 +1,32 @@
+name: Proxy for audio server
+on:
+  workflow_dispatch:
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - run: df -h $HOME
+      - uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: !!bool false
+          android: !!bool true
+          dotnet: !!bool true
+          haskell: !!bool true
+          large-packages: !!bool true
+          docker-images: !!bool true
+          swap-storage: !!bool true
+      - run: df -h $HOME
+      - env:
+          TENCENT__DOCKER_REGISTRY: ccr.ccs.tencentyun.com
+          TENCENT__DOCKER_USERNAME: ${{ secrets.TENCENT_DOCKER_HUB_USERNAME }}
+          TENCENT__DOCKER_PASSWORD: ${{ secrets.TENCENT_DOCKER_HUB_PASSWORD }}
+
+          DOCKER__DOCKER_REGISTRY: docker.io
+          DOCKER__DOCKER_USERNAME: ${{ secrets.DOCKER_DOCKER_HUB_USERNAME }}
+          DOCKER__DOCKER_PASSWORD: ${{ secrets.DOCKER_DOCKER_HUB_PASSWORD }}
+
+          GITHUB__DOCKER_REGISTRY: ghcr.io
+          GITHUB__DOCKER_USERNAME: ${{ github.actor }}
+          GITHUB__DOCKER_PASSWORD: ${{ secrets.GHCR_DOCKER_HUB_PASSWORD }}
+        run: |
+          docker run --rm --entrypoint webui.sh ghcr.io/sanzenwin/mirror:sanzenwin-index-tts-0.1.2 --share
